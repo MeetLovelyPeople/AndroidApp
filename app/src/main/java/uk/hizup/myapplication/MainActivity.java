@@ -26,7 +26,7 @@ import android.webkit.WebView;
 public class MainActivity extends AppCompatActivity {
 
     // The domain we will load into the native app (e.g., mysite.com or www.mysite.com)
-    public final static String DOMAIN_SITE = "coolonweb.com";
+    public final static String DOMAIN_SITE = "dublin.meetlovelypeople.com";
     // The protocol (e.g., http or https for site with SSL enabled)
     private String protocol = "http";
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         WebView view = (WebView) this.findViewById(R.id.webView);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new MyBrowser());
-        view.loadUrl(protocol + "://" + DOMAIN_SITE);
+        view.loadUrl(protocol + "://" + DOMAIN_SITE + "/?mobapp=1");
     }
 
     /*
